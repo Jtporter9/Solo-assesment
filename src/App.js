@@ -22,6 +22,7 @@ function App() {
 
 
 useEffect(() => {
+  // if searchType and state dropdowns have values then make api call
   if (searchType !== '' && state !== '') {
       setActiveRep({});
       axios
@@ -67,7 +68,9 @@ useEffect(() => {
             <Typography variant="h2" fontSize={32} gutterBottom component="h2">
               List{results.length > 0 ? ` / ${searchType}s (${state})` : ""}
             </Typography>
+            {/* Error handling, if an Error occurs in the api request then show that Error  */}
             {error === "" ? (
+              // Either show the Table with results or show that a search has not happened yet. 
               results.length > 0 ? (
                 <Table results={results} activeRep={activeRep} setActiveRep={setActiveRep} />
               ) : (
