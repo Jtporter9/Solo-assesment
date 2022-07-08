@@ -58,9 +58,6 @@ useEffect(() => {
         setSearchType={setSearchType}
         state={state}
         setState={setState}
-        setResults={setResults}
-        setError={setError}
-        setActiveRep={setActiveRep}
       />
       <Box>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>

@@ -13,9 +13,6 @@ export default function searchDetails({
   setSearchType,
   state,
   setState,
-  setResults,
-  setError,
-  setActiveRep,
 }) {
 
   return (
